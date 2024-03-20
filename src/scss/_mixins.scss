@@ -1,0 +1,58 @@
+@mixin main_title {
+    color: $_white;
+    font-size: $_main_title;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 1170px;
+}
+@mixin title {
+    font-size: $_lead;
+    color: $_black;
+}
+@mixin text {
+    font-size: $_text;
+    color: $_dark-grey;
+    font-weight: 400;
+}
+@mixin nav {
+    color: $_white;
+    font-size: $_desc;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@mixin button {
+    display: block;
+    background-color: $_light-red;
+    color: $_white;
+    text-transform: uppercase;
+    font-weight: 900;
+    width: 370px;
+    // padding: 5px 20px;
+}
+@mixin background {
+    background-image: url(../img/img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+@mixin masc {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: $_blue-header;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+@mixin ikon-links {
+    display: block;
+    width: 39px;
+    height: 39px;
+    font-size: $_text;
+    color: $_grey;
+    border: $_border-ikon;
+}

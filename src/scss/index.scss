@@ -1,0 +1,23 @@
+@import './cdn';
+@import './variables';
+@import './mixins';
+@import './header.scss';
+@import './font';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    font-family: "Raleway", sans-serif;
+}
+.conteiner {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
