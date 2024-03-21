@@ -18,7 +18,7 @@
 @mixin nav {
     color: $_white;
     font-size: $_desc;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 @mixin button {
@@ -26,9 +26,13 @@
     background-color: $_light-red;
     color: $_white;
     text-transform: uppercase;
+    text-align: center;
+    font-size: $_lead;
     font-weight: 900;
     width: 370px;
-    // padding: 5px 20px;
+    line-height: 80px;
+    margin: auto;
+    cursor: pointer;
 }
 @mixin background {
     background-image: url(../img/img.png);
