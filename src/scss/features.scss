@@ -1,0 +1,49 @@
+.features {
+    padding: 116px 0;
+}
+.features-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 85px 19px;
+}
+.features__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.features__card-ikon {
+     width: 100px;
+     height: 100px;
+     margin-bottom: 29px;
+     position: relative;
+}
+.fa-pen-to-square {
+    @include card-ikon;
+}
+.fa-display {
+    @include card-ikon;
+}
+.fa-lightbulb {
+    @include card-ikon;
+}
+.fa-star {
+    @include card-ikon;
+}
+.fa-circle-check {
+    @include card-ikon;
+}
+.fa-circle-down {
+    @include card-ikon;
+}
+.features__card-title {
+    @include title;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+.features__card-text {
+    text-align: center;
+    p {
+        @include text; 
+    }
+}

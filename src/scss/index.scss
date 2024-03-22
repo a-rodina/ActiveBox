@@ -1,8 +1,11 @@
 @import './cdn';
 @import './variables';
 @import './mixins';
-@import './header.scss';
 @import './font';
+@import './header.scss';
+@import './features.scss';
+@import './our_team.scss';
+
 
 * {
     margin: 0;
