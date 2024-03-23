@@ -1,0 +1,33 @@
+.download {
+    padding: 114px 0;
+}
+.download-title {
+    max-width: 100%;
+    text-align: center;
+    font-size: $_sub_title;
+    font-weight: 500;
+    color: $_black;
+    margin-bottom: 20px;
+}
+.download-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+    p {
+        font-size: $_text;
+        font-weight: 700;
+        color: $_black;
+        text-transform: uppercase;
+    }
+}
+.download-link {
+    @include button;
+    transition: 0.3s;
+    &:hover {
+        background-color: $_red;
+    }
+    &:active {
+        background-color: $_light-red;
+        box-shadow: 0 0 20px 10px rgba(255, 67, 67, 0.5);
+    }
+}

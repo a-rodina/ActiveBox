@@ -3,8 +3,8 @@
 }
 .team-wrap {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 20px; 
 }
 .team__card {
     display: flex;
