@@ -1,0 +1,17 @@
+footer {
+    padding: 24px 0;
+    background-color: $_dark-blue;
+}
+.footer-text {
+    display: block;
+    max-width: 370px;
+    text-align: center;
+    margin: auto;
+    color: $_grey-footer;
+    font-size: $_text;
+    font-weight: 400;
+    text-transform: capitalize;
+    span {
+        color: $_white;
+    }
+}

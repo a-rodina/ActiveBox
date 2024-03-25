@@ -1,0 +1,37 @@
+.contact {
+    padding: 71px 0;
+    background-color: $_blue;
+}
+.contact-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+}
+.contact__content {
+    width: 370px;
+    text-align: center;
+    margin: 0 15px;
+}
+.contact__title {
+    @include contact-title;
+    margin-bottom: 29px;
+}
+.contact__text {
+    color: $_white;
+    font-size: $_text; 
+    font-weight: 400;
+    text-transform: capitalize; 
+}
+.contact__links-title {
+    @include contact-title;
+    margin-bottom: 48px;
+}
+.contact__links {
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+
