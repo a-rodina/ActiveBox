@@ -1,6 +1,13 @@
 .download {
     padding: 114px 0;
     background-color: $_white;
+
+    @media (max-width: 1024px) {
+        padding: 78px 0;
+    }
+    @media (max-width: 320px) {
+        padding: 45px 0;
+    } 
 }
 .download-title {
     max-width: 100%;
@@ -9,6 +16,13 @@
     font-weight: 500;
     color: $_black;
     margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+        font-size: 24px;
+    }
+    @media (max-width: 320px) {
+        font-size: 18px;
+    }
 }
 .download-text {
     width: 100%;
@@ -19,7 +33,17 @@
         font-weight: 700;
         color: $_black;
         text-transform: uppercase;
+
+        @media (max-width: 1024px) {
+            font-size: 14px;
+        }
+        @media (max-width: 320px) {
+            font-size: 13px;
+        }
     }
+    @media (max-width: 320px) {
+        margin-bottom: 11px;
+    } 
 }
 .download-link {
     @include button;
@@ -30,5 +54,12 @@
     &:active {
         background-color: $_light-red;
         box-shadow: 0 0 20px 10px rgba(255, 67, 67, 0.5);
+    }
+    @media (max-width: 1024px) {
+        width: 314px;
+        font-size: 18px;
+    }
+    @media (max-width: 566px) {
+        width: 279px;
     }
 }

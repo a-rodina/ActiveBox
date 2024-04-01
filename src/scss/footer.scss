@@ -1,6 +1,13 @@
 footer {
     padding: 24px 0;
     background-color: $_dark-blue;
+
+    @media (max-width: 1024px) {
+        padding: 14px 0;
+    }
+    @media (max-width: 320px) {
+        padding: 28px 0;
+    }
 }
 .footer-text {
     display: block;
@@ -13,5 +20,9 @@ footer {
     text-transform: capitalize;
     span {
         color: $_white;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
     }
 }

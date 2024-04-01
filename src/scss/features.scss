@@ -1,11 +1,29 @@
 .features {
     padding: 116px 0;
     background-color: $_white;
+
+    @media (max-width: 1024px) {
+        padding: 78px 0;
+    }
+    @media (max-width: 320px) {
+        padding: 40px 0;
+    }
 }
 .features-wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 88px 19px;
+
+    @media (max-width: 1024px) {
+        gap: 49px 10px;
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 320px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 41px;
+    }
 }
 .features__card {
     display: flex;
@@ -13,10 +31,15 @@
     align-items: center;
 }
 .features__card-ikon {
-     width: 100px;
-     height: 100px;
-     margin-bottom: 29px;
-     position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 29px;
+    position: relative;
+
+    @media (max-width: 1024px) {
+       width: 85px;
+       height: 85px;
+    }
 }
 .fa-pen-to-square {
     @include card-ikon;
@@ -41,10 +64,18 @@
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 35px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 20px;
+        font-size: 18px;
+     }
 }
 .features__card-text {
     text-align: center;
     p {
         @include text; 
+        @media (max-width: 1024px) {
+            font-size: 14px;
+        }
     }
 }

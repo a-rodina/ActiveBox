@@ -1,30 +1,72 @@
 .contact {
     padding: 71px 0;
     background-color: $_blue;
+
+    @media (max-width: 1024px) {
+        padding: 45px 0;
+    }
+    @media (max-width: 566px) {
+        padding: 34px 0;
+    }
 }
 .contact-wrap {
     display: flex;
     justify-content: space-between;
     margin: 0 -15px;
+
+    @media (max-width: 566px) {
+        display: block;
+        flex-wrap: wrap;
+    }
+
+    
 }
 .contact__content {
     width: 370px;
     text-align: center;
     margin: 0 15px;
+
+    @media (max-width: 1024px) {
+        width: 315px;
+    }
+    @media (max-width: 566px) {
+        width: 90%;
+        margin-bottom: 59px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 .contact__title {
     @include contact-title;
     margin-bottom: 29px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 17px;
+        font-size: 14px;
+    }
+    @media (max-width: 566px) {
+        margin-bottom: 34px;
+    }
 }
 .contact__text {
     color: $_white;
     font-size: $_text; 
     font-weight: 400;
     text-transform: capitalize; 
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
 }
 .contact__links-title {
     @include contact-title;
     margin-bottom: 48px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 32px;
+        font-size: 14px;
+    }
 }
 .contact__links {
     width: 170px;
