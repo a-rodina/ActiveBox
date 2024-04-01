@@ -1,0 +1,59 @@
+.work {
+    background-color: $_white;
+}
+.work-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li:hover .overlay {
+        transform: scale(1);
+    }
+}
+.work-element {
+    flex-basis: 25%;
+    position: relative;
+    cursor: pointer;
+}
+.work-link {
+    display: block;
+    overflow: hidden;
+    border: $_border;
+    aspect-ratio: 1/1;
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $_red-rgba;
+    transform: scale(0);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.overlay:active {
+    background: $_dark-red;
+}
+.work-title {
+    font-weight: 900;
+    font-size: $_lead;
+    color: $_white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.work-text {
+    display: block;
+    font-weight: 400;
+    font-size: $_text;
+    color: $_white;
+    text-align: center;
+}
