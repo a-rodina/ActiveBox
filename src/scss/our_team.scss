@@ -1,16 +1,44 @@
 .team {
     padding: 114px 0;
     background-color: $_white;
+
+    @media (max-width: 1024px) {
+        padding: 78px 0;
+    } 
+    @media (max-width: 320px) {
+        padding: 35px 0;
+    } 
 }
 .team-wrap {
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     gap: 20px; 
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, 227px);
+        gap: 15px;
+    } 
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 584px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: 320px) {
+        gap: 56px;
+    }
 }
 .team__card {
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    @media (max-width: 767px) {
+        align-items: center;
+    }
+    @media (max-width: 320px) {
+        align-items: start;
+    }
 }
 .team__card-img {
     width: 270px;
@@ -23,11 +51,32 @@
         width: 100%;
         height: 100%;
     }
+
+    @media (max-width: 1024px) {
+        width: 227px;
+        height: 227px;
+    } 
+    @media (max-width: 767px) {
+        width: 270px;
+        height: 270px;
+    }
+    @media (max-width: 584px) {
+        width: 280px;
+        height: 280px;
+    }
+    @media (max-width: 320px) {
+        width: 100%;
+        height: 280px;
+    }
 }
 .team__card-title {
     @include title;
     text-transform: capitalize;
     margin-bottom: 5px;
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+    } 
 }
 .team__card-subtitle {
     color: $_light-red;
@@ -35,17 +84,43 @@
     font-size: $_text;
     text-transform: uppercase;
     margin-bottom: 18px;
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    } 
 }
 .team__card-text {
     margin-bottom: 38px;
     p {
-      @include text;  
+      @include text; 
+
+      @media (max-width: 1024px) {
+        font-size: 14px;
+    }  
     }
+
+    @media (max-width: 767px) {
+        width: 270px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    @media (max-width: 320px) {
+        text-align: start;
+        margin-bottom: 55px;
+    }
+    
 }
 .team__card-links {
     display: flex;
     width: 128px;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        width: 107px;
+    } 
+    @media (max-width: 320px) {
+        width: 129px;
+    }
 }
 .card-links {
     display: block;
@@ -53,6 +128,15 @@
     height: 39px;
     border: $_border-ikon;
     position: relative;
+
+    @media (max-width: 1024px) {
+        width: 33px;
+        height: 33px;
+    } 
+    @media (max-width: 320px) {
+        width: 39px;
+        height: 39px;
+    }
 }
 .fa-facebook-f {
     @include links-ikon;

@@ -3,66 +3,145 @@ header {
     &::before {
         @include masc;
     }
+    @media (max-width: 320px) {
+        height: auto;
+    }
 }
 .header-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $_grey-nav;
+
+    @media (max-width: 767px) {
+        padding: 10px 0;
+    }
+    @media (max-width: 320px) {
+        border-bottom: none;
+        padding: 21px 0;
+    }
 }
 .logo-left {
     font-size: $_sub_title;
     text-transform: uppercase;
     font-weight: 900;
     color: $_light-blue;
+
+    @media (max-width: 320px) {
+        font-size: 15px;
+    }
 }
 .logo-right {
     font-size: $_sub_title;
     text-transform: uppercase;
     font-weight: 100;
     color: $_white;
+
+    @media (max-width: 320px) {
+        font-size: 15px;
+    }
+}
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 .navigation {
     width: 670px;
     display: flex;
     justify-content: space-between;
- }
+
+    @media (max-width: 1024px) {
+        width: 566px;
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
 .navigation-link {
+    display: block;
     margin-left: 15px;
     width: 134px;
     text-align: center;
     padding: 35px 0;
     border-bottom: $_border-transparent;
     transition: 0.2s;
+    @include nav;
+    transition: 0.2s;
     &:hover {
         border-bottom: $_border-hover;
     }
     &:active {
         border-bottom: $_border-active;
+        color: $_red;
     }
     &:first-child {
         margin-left: 0;
     }
-    a {
-        @include nav;
-        transition: 0.2s;
-        &:active {
-            color: $_red;
-        }
+    
+    @media (max-width: 1024px) {
+        width: 112px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+}
+.burger {
+    width: 24px;
+    height: 18px;
+    overflow: hidden;
+    display: none;
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 767px) {
+        display: block;
+        width: 30px;
+        height: 25px;
+    }
+    @media (max-width: 320px) {
+        width: 24px;
+        height: 18px;
     }
 }
 .header-content {
     padding: 100px 0;
+    
+    @media (max-width: 1024px) {
+        padding: 157px 0;
+    }
+    @media (max-width: 320px) {
+        padding: 49px 0;
+    }
 }
 .main-title {
     @include main_title;
     margin-bottom: 32px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 61px;
+        font-size: 48px;
+    }
+    @media (max-width: 320px) {
+        margin-bottom: 32px;
+        font-size: 36px;
+    }
 }
 .header-content-text {
     text-align: center;
     color: $_white;
     font-size: $_lead;
-    margin-bottom: 79px
+    margin-bottom: 79px;
+    
+    @media (max-width: 1024px) {
+        font-size: 18px;
+    }
+    @media (max-width: 320px) {
+        margin-bottom: 49px;
+        font-size: 14px;
+    }
 }
 .header-content-link {
     @include button;
@@ -73,5 +152,16 @@ header {
     &:active {
         background-color: $_light-red;
         box-shadow: 0 0 20px 10px rgba(255, 67, 67, 0.5);
+    }
+
+    @media (max-width: 1024px) {
+        width: 314px;
+    }
+    @media (max-width: 566px) {
+        width: 279px;
+    }
+    @media (max-width: 320px) {
+        line-height: 60px;
+        font-size: 24px;
     }
 }
