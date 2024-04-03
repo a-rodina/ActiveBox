@@ -6,3 +6,9 @@ $(document).ready(function () {
         speed:1000,
     });
 });
+
+$(document).ready(function () {
+    $('.burger').click(function (event) {
+        $('.burger, .popup, .header-navigation').toggleClass('active');
+    });
+});

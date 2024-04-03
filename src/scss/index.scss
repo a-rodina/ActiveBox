@@ -22,6 +22,12 @@
 html {
     font-family: 'Raleway', 'Cardo', sans-serif;
 }
+body.lock {
+    @media (max-width: 767px) {
+        overflow: hidden;
+    }
+
+}
 .conteiner {
     max-width: 1170px;
     padding: 0 15px;
