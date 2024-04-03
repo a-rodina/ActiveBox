@@ -7,19 +7,20 @@ header {
         height: auto;
     }
 }
+
 .header-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $_grey-nav;
+    width: 100%;
 
     @media (max-width: 767px) {
         padding: 10px 0;
     }
-    @media (max-width: 320px) {
-        border-bottom: none;
-        padding: 21px 0;
-    }
+}
+.header-navigation.active {
+    display: none;
 }
 .logo-left {
     font-size: $_sub_title;
@@ -36,7 +37,7 @@ header {
     text-transform: uppercase;
     font-weight: 100;
     color: $_white;
-
+    
     @media (max-width: 320px) {
         font-size: 15px;
     }
@@ -44,6 +45,16 @@ header {
 .header-nav {
     display: flex;
     align-items: center;
+}
+.menu {
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 21px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+    }
 }
 .navigation {
     width: 670px;
@@ -83,11 +94,16 @@ header {
         margin-left: 5px;
         font-size: 12px;
     }
+    @media (max-width: 767px) {
+        text-align: start;
+        padding: 25px 0;
+    }
 }
 .burger {
     width: 24px;
     height: 18px;
     overflow: hidden;
+    cursor: pointer;
     display: none;
     img {
         object-fit: cover;
@@ -100,12 +116,75 @@ header {
         display: block;
         width: 30px;
         height: 25px;
+        position: relative;
     }
     @media (max-width: 320px) {
         width: 24px;
         height: 18px;
     }
 }
+.popup {
+    padding: 10px 15px;
+    margin: 0 -15px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    display: none;
+    background-image: url(../img/img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &::before {
+        @include masc;
+    }
+}
+.popup.active {
+    position: absolute;
+    display: block;
+}
+.header-nav-popup {
+    position: relative;
+    z-index: 10;
+    animation-name: nav-popup;
+    animation-duration: 0.7s;
+}
+
+@keyframes nav-popup {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.navigation-link-popup {
+    display: block;
+    margin-left: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 35px 0;
+    border-bottom: $_border-transparent;
+    transition: 0.2s;
+    @include nav;
+    transition: 0.2s;
+    &:hover {
+        border-bottom: $_border-hover;
+    }
+    &:active {
+        border-bottom: $_border-active;
+        color: $_red;
+    }
+    &:first-child {
+        margin-left: 0;
+    }
+    @media (max-width: 767px) {
+        text-align: start;
+        padding: 25px 0;
+    }
+}
+
 .header-content {
     padding: 100px 0;
     
@@ -153,6 +232,12 @@ header {
         background-color: $_light-red;
         box-shadow: 0 0 20px 10px rgba(255, 67, 67, 0.5);
     }
+    animation-name: puls;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    animation-iteration-count: 2;
+    animation-delay: 0.3s;
+
 
     @media (max-width: 1024px) {
         width: 314px;
@@ -163,5 +248,15 @@ header {
     @media (max-width: 320px) {
         line-height: 60px;
         font-size: 24px;
+    }
+}
+
+@keyframes puls {
+    0% {
+    
+    }
+    100% {
+        background-color: $_light-red;
+        box-shadow: 0 0 20px 10px rgba(255, 67, 67, 0.5);  
     }
 }
