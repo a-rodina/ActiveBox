@@ -92,10 +92,10 @@
 .team__card-text {
     margin-bottom: 38px;
     p {
-      @include text; 
+        @include text; 
 
-      @media (max-width: 1024px) {
-        font-size: 14px;
+        @media (max-width: 1024px) {
+            font-size: 14px;
     }  
     }
 
