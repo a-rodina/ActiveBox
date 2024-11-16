@@ -1,4 +1,4 @@
-#ActiveBox
+# ActiveBox
 Макет лендинга на базе HTML и SCSS.
 
 Утсановка:
@@ -10,3 +10,7 @@
 2. Установка npm
 
      `npm install`
+
+3. Запуск проекта
+   
+   `npm run start`
