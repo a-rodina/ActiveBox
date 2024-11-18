@@ -5,7 +5,7 @@
 
 1. Клонирование репозитория
 
-   `git clone https://github.com/a-rodina/Rodina_Anastasiya_TMS.git`
+   `https://github.com/a-rodina/ActiveBox.git`
 
 2. Установка npm
 
